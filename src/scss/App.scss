@@ -1,0 +1,31 @@
+p {
+  margin-bottom: 1rem;
+}
+
+
+.title {
+  margin-left: 10px;
+}
+
+
+.input {
+  width: 60px;
+  text-align: end;
+  margin-left: 20px;
+}
+
+
+p {
+  margin-bottom: 1rem;
+}
+.counter {
+  padding: 10px;
+  .counter-controls, .title{
+    display: inline-block;
+    margin-left: 10px;
+    
+    button {
+      margin-right: 4px;
+    }
+  }
+}

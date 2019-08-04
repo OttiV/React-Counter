@@ -3,7 +3,7 @@ import AlternativeCounter from "./components/AlternativeCounter";
 import Counter from "./components/Counter";
 import FourthCounter from "./components/FourthCounter";
 import Total from "./components/Total";
-import "./App.css";
+import "./scss/App.scss";
 
 class App extends Component {
   constructor(props, context) {

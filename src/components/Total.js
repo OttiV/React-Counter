@@ -4,7 +4,7 @@ export default class Total extends Component {
     const { counterTot, altData, extraData } = this.props;
     const tot = counterTot + extraData + parseFloat(altData)
     return <div className="Total"><h1 class="title">Total = {tot}
-    <a class="button is-info is-outlined" onClick={this.props.onDelete}>
+    <a className="button is-info is-outlined" onClick={this.props.onDelete}>
     <span>Reset</span>
     <span class="icon is-small">
       <i class="fas fa-times"></i>
