@@ -17,12 +17,12 @@ class App extends Component {
   }
   OnDecrement = () => {
     this.setState({
-      extraData: this.state.extraData -1
+      extraData: this.state.extraData - 1
     });
   };
   OnIncrement = () => {
     this.setState({
-      extraData: this.state.extraData +1
+      extraData: this.state.extraData + 1
     });
   };
   OnChange = event => {
@@ -57,25 +57,31 @@ class App extends Component {
     });
     this.setState({ data: updatedCounters });
   };
-  
+
   render() {
     return (
       <div className="app">
-      <div className="main-counter">
-        <div>{this.state.data.map(this.renderCounter)}</div>
-        <FourthCounter extraData={this.state.extraData} OnDecrement={this.OnDecrement} OnIncrement={this.OnIncrement}/>
-        <AlternativeCounter
-          OnChange={this.OnChange}
-          altData={this.state.altData}
-        />
-        </div>
-        <div className="counter-total">
-        <Total
-          counterTot={this.state.data.reduce((a, c) => a + c.value, 0)}
-          extraData={this.state.extraData}
-          altData={this.state.altData}
-          onDelete={this.onDelete}
-        />
+        <div className="counter-displayer">
+          <div className="main-counter">
+            <div>{this.state.data.map(this.renderCounter)}</div>
+            <FourthCounter
+              extraData={this.state.extraData}
+              OnDecrement={this.OnDecrement}
+              OnIncrement={this.OnIncrement}
+            />
+            <AlternativeCounter
+              OnChange={this.OnChange}
+              altData={this.state.altData}
+            />
+          </div>
+          <div className="counter-total">
+            <Total
+              counterTot={this.state.data.reduce((a, c) => a + c.value, 0)}
+              extraData={this.state.extraData}
+              altData={this.state.altData}
+              onDelete={this.onDelete}
+            />
+          </div>
         </div>
       </div>
     );

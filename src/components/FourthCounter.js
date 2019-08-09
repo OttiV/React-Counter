@@ -7,7 +7,7 @@ export default class Counter extends Component {
     const { extraData } = this.props;
     return (
       <div className="counter">
-        <b>{extraData}</b>
+        <b className="value">{extraData}</b>
         <div className="counter-controls">
           <button
             onClick={this.props.OnDecrement}
