@@ -60,20 +60,23 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div className="app">
+      <div className="main-counter">
         <div>{this.state.data.map(this.renderCounter)}</div>
         <FourthCounter extraData={this.state.extraData} OnDecrement={this.OnDecrement} OnIncrement={this.OnIncrement}/>
         <AlternativeCounter
           OnChange={this.OnChange}
           altData={this.state.altData}
         />
-        
+        </div>
+        <div className="counter-total">
         <Total
           counterTot={this.state.data.reduce((a, c) => a + c.value, 0)}
           extraData={this.state.extraData}
           altData={this.state.altData}
           onDelete={this.onDelete}
         />
+        </div>
       </div>
     );
   }
